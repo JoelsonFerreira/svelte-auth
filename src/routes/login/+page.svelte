@@ -2,6 +2,8 @@
 	import InputField from "../../components/input-field.svelte";
 
 	export let form;
+
+  $: error = form?.issues.find(({ path }) => path.length === 0)
 </script>
 
 <form method="POST">
@@ -23,6 +25,10 @@
 		type="password"
 		required
 	/>
+	
+  {#if error}
+    <span class="error">{error.message}</span>
+  {/if}
 
 	<button type="submit">Entrar</button>
 	<a href="/register">Registrar-se</a>
