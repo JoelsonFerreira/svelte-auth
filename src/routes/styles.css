@@ -32,6 +32,7 @@ body {
 
 h1,
 h2,
+legend,
 p {
 	font-weight: 400;
 }
@@ -41,8 +42,9 @@ p {
 }
 
 a {
-	color: var(--color-theme-1);
+	color: var(--color-theme-2);
 	text-decoration: none;
+	text-align: center;
 }
 
 a:hover {
@@ -82,6 +84,19 @@ input,
 button {
 	font-size: inherit;
 	font-family: inherit;
+	border-radius: 8px;
+	padding: .5rem 1rem;
+}
+
+input {
+	border: 1px solid #ccc;
+}
+
+button {
+	background: var(--color-theme-2);
+	color: #FFF;
+	border: none;
+	font-weight: 500;
 }
 
 button:focus:not(:focus-visible) {
@@ -104,4 +119,34 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 40rem;
+	gap: 1rem;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 20rem;
+	background: #FFF;
+	padding: 1rem;
+	border-radius: 1rem;
+	border: 1px solid #CCC;
+}
+
+.error {
+	color: red;
+}
+
+.input-field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: .25rem;
+}
+
+legend {
+	font-size: 1.5rem;
+	text-align: center;
 }
