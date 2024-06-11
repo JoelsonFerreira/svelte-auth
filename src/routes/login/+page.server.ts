@@ -5,7 +5,7 @@ import { getUser } from '$lib/server/database.js';
 import type { FormActionFail } from '../../types/form-action.js';
 
 const loginSchema = z.object({
-  email: z.string().email().max(5),
+  email: z.string().email(),
   password: z.coerce.string().min(8),
 })
 
